@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Forever Valentine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #ffe6f2;
+            color: #660033;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(rgba(255,230,242,0.8), rgba(255,230,242,0.8)), url('your-photo-url.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-family: 'Brush Script MT', cursive;
+            color: #ff0066;
+        }
+
+        .heart {
+            color: #ff0066;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+            75% { transform: scale(0.8); }
+            100% { transform: scale(1); }
+            }
+
+        .content-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .memory-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        .proposal-button {
+            background: #ff0066;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin: 30px 0;
+        }
+
+        .proposal-button:hover {
+            transform: scale(1.1);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #ff0066;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Happy Valentine's Day, <span class="heart">❤</span><br>Satakshi</h1>
+            <p>Scroll down to begin our love story...</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-section">
+            <div class="memory-box">
+                
+                <p>Hey madam from "Saree looks pretty well on you" to "my date forever" , you will always be my constant forever date. 
+                     <br>   I Love You The Most Shonu <br> </p>
+                <!-- Add your personal story here -->
+            </div>  
+
+            <button class="proposal-button" onclick="showProposal()">Click for Special Message</button>
+
+            <div id="proposal" style="display: none;">
+                <h2>Will You Be My Forever Valentine?</h2>
+                <p>[Your personal proposal message]</p>
+                <div style="margin: 30px;">
+                    <button onclick="respondYes()" class="proposal-button">YES!</button>
+                    <button onclick="respondMaybe()" class="proposal-button">Maybe?</button>
+                </div>
+            </div>
+
+            <div class="photo-gallery">
+                <!-- Add 4-6 of your photos -->
+                <img src="pic1.jpg" alt="Our Memory">
+                <img src="pic2.jpg" alt="Our Memory">
+                <img src="pic3.jpg" alt="Our Memory">
+                <img src="pic4.jpg" alt="Our Memory">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with love by Sagnik</p>
+        <p>❤ Forever Yours ❤</p>
+    </footer>
+
+    <script>
+        function showProposal() {
+            document.getElementById('proposal').style.display = 'block';
+            document.querySelector('.proposal-button').style.display = 'none';
+        }
+
+        function respondYes() {
+            alert("YAY! I'm the luckiest person in the world! I love you forever! ❤");
+            // Add confetti animation or redirect to special page
+        }
+
+        function respondMaybe() {
+            alert("Let me convince you in person! 💐 Prepare for infinite hugs and kisses!");
+        }
+    </script>
+</body>
+</html>
